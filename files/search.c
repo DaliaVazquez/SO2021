@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 int main(int argc, char **argv) {
   char *filename = argv[1];
   char *atrubuto = argv[2];
@@ -16,8 +15,8 @@ int main(int argc, char **argv) {
   STUDENT newstudent;
   
   while(fread(&newstudent,sizeof(newstudent),1,forigen)){
-      if(strcmp(atrubuto,"lastname")==0){
-          strcmp(palabra,newstudent.lastname);
+      /*if(strcmp(atrubuto,"lastname")==0){
+          //strcmp(palabra,newstudent.lastname);
       }
      if(strcmp(atrubuto,"name")==0){
           result=strcmp(palabra,newstudent.name);
@@ -29,7 +28,7 @@ int main(int argc, char **argv) {
       if(strstr(atrubuto,"semestre")==NULL){
           strstr(palabra,"semestre");
       }
-      /**/
+      */
       //printf("strstr(palabra, newstudent.lastname) == NULL");
       if(strstr(palabra, newstudent.lastname) != NULL){
           printf("%s %s %d %d \n",newstudent.name,newstudent.lastname,newstudent.id,newstudent.semestre);
